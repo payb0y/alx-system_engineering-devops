@@ -1,2 +1,2 @@
 #!/bin/bash
-echo './, ../' | cat - <(ls -1Ap | grep -v '/$') | tr '\n' ',' | sed 's/, $/\n/'
+echo './, ../' | cat - <(ls -1Ap | grep -v '/$') | tr '\n' ', ' | sed 's/,$/\n/'
