@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap | awk '{ORS=(NR%2?", ":"\n")}1' | sed 's/,$/\n/'
+(echo './, ../'; ls -1Ap | grep -v '/$') | tr '\n' ', ' | sed 's/,$/\n/'
