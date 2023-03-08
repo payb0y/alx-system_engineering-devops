@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a1p | sort -d -k1.1 -k1 | tr '\n' ',' | sed 's/,$/\n/'
+ls -1ap | tr '\n' ',' | sed 's/,$/\n/' | sed 's/\(.*\)\/$/\1\//' | sed 's/\([^0-9A-Za-z]*\)\([0-9A-Za-z]*\)/\2\1/g' | sed 's/^[.]\{0,2\},//' | sed 's/,[.]\{0,2\}$//' && echo
