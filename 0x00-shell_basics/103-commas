@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s, " "./" "../" * | sed 's/, $/\n/'
+printf "%s\n" "./" "../" * | awk '{print $0 (substr($0,length($0),1) == "/" ? "" : "/")}'
