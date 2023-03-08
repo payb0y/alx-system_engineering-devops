@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1ap | tr '\n' ',' | sed 's/,$/\n/' | awk '{print $0", "}' | sed 's/^\.,/.,/' | sed 's/,\([^ ]\)/, \1/g' | sort -df --key=1.1,1.1 --key=2n | sed 's/, $//'
+ls -amvp
